@@ -18,3 +18,21 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Carne(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    img = models.URLField()
+    last_updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.title
+
+class Bebida(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    img = models.URLField()
+    last_updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.title

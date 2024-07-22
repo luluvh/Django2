@@ -5,41 +5,99 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <style>
+        #listaCarnes, #listaBebidas {
+            display: none;
+            margin-top: 20px;
+        }
+        .list-group-item {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .card-title {
+            font-family: 'Lobster', cursive;
+        }
+        .card-text {
+            font-size: 1.1rem;
+        }
+    </style>
+    <script>
+        function mostrarListaCarnes() {
+            document.getElementById('listaCarnes').style.display = 'block';
+            return false; // Evita que el enlace redirija
+        }
+        function mostrarListaBebidas() {
+            document.getElementById('listaBebidas').style.display = 'block';
+            return false; // Evita que el enlace redirija
+        }
+    </script>
 </head>
 <body>
 
     <!-- Blog Header -->
-    <div class="page-header">
-        <h1><a href="/">Carnitas Reu</a></h1>
+    <div class="page-header text-center">
+        <h1><a href="/" class="text-decoration-none text-dark">Carnitas Reu</a></h1>
     </div>
 
     <!-- Blog Content -->
-    <div>
-        <h2><a href="#">Productos</a></h2>
-        <p>Lo más fresco lo puedes conseguir aquí</p>
-    </div>
+    <div class="container my-5">
+        <div class="text-center mb-4">
+            <h2><a href="#" class="text-decoration-none text-dark">Productos</a></h2>
+            <p>Lo más fresco lo puedes conseguir aquí</p>
+        </div>
 
-    <div class="card text-bg-dark">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIs9IdP9tvJ27EhbwkDCplKTNy5hPaOuF3mQ&s" class="card-img" alt="Carne">
-        <div class="card-img-overlay">
-            <h5 class="card-title">CARNES</h5>
-            <p class="card-text">¡Todo tipo de Carnes para tu hogar!rrr</p>
-            
-            <p class="card-text"><small>Last updated 3 mins ago</small></p>
-            <a href="https://example.com/bebidas" class="btn btn-primary">click</a>
-                </div>
+        <div class="card text-bg-dark mb-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIs9IdP9tvJ27EhbwkDCplKTNy5hPaOuF3mQ&s" class="card-img" alt="Carne">
+            <div class="card-img-overlay text-center">
+                <h5 class="card-title">CARNES</h5>
+                <p class="card-text">¡Todo tipo de Carnes para tu hogar!</p>
+                <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                <a href="#" class="btn btn-primary" onclick="return mostrarListaCarnes();">click</a>
             </div>
         </div>
+
+        <!-- Contenedor para la lista de carnes -->
+        <div id="listaCarnes" class="container">
+            <ul class="list-group">
+                <li class="list-group-item">Pollo</li>
+                <li class="list-group-item">Res</li>
+                <li class="list-group-item">Cerdo</li>
+                <li class="list-group-item">Cordero</li>
+                <li class="list-group-item">Pavo</li>
+                <li class="list-group-item">Conejo</li>
+                <li class="list-group-item">Venado</li>
+                <li class="list-group-item">Pato</li>
+                <li class="list-group-item">Bisonte</li>
+                <li class="list-group-item">Cabra</li>
+            </ul>
+        </div>
+
+        <div class="card text-bg-dark mb-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysJQHxXqrXrpj6T-G-qg0s18f5rVWY1wE3g&s" class="card-img" alt="Bebidas">
+            <div class="card-img-overlay text-center">
+                <h5 class="card-title">Bebidas</h5>
+                <p class="card-text">¡Refrescate con nuestras bebidas!</p>
+                <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                <a href="#" class="btn btn-primary" onclick="return mostrarListaBebidas();">click</a>
+            </div>
+        </div>
+
+        <!-- Contenedor para la lista de bebidas -->
+        <div id="listaBebidas" class="container">
+            <ul class="list-group">
+                <li class="list-group-item">Agua</li>
+                <li class="list-group-item">Refresco</li>
+                <li class="list-group-item">Jugo de naranja</li>
+                <li class="list-group-item">Jugo de manzana</li>
+                <li class="list-group-item">Limonada</li>
+                <li class="list-group-item">Té helado</li>
+                <li class="list-group-item">Cerveza</li>
+                <li class="list-group-item">Vino tinto</li>
+                <li class="list-group-item">Vino blanco</li>
+                <li class="list-group-item">Sidra</li>
+            </ul>
         </div>
     </div>
 
-    <div class="card text-bg-dark">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysJQHxXqrXrpj6T-G-qg0s18f5rVWY1wE3g&s" class="card-img" alt="Bebidas">
-        <div class="card-img-overlay">
-            <h5 class="card-title">Bebidas</h5>
-            <p class="card-text">¡Refrescate con nuestras bebidas!</p>
-            <p class="card-text"><small>Last updated 3 mins ago</small></p>
-            <a href="https://example.com/bebidas" class="btn btn-primary">click</a>
-                </div>
-            </div>
-        </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>

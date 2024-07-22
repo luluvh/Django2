@@ -1,7 +1,18 @@
 from django.shortcuts import render
-from django.utils import timezone
-from .models import Post
+from .models import Carne, Bebida
+
 
 def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'blog/post_list.html', {'posts': posts})
+    # Lógica para la lista de publicaciones
+    return render(request, 'blog/post_list.html')
+
+def carne_list(request):
+    carnes = Carne.objects.all()
+    return render(request, 'blog/carne_list.html', {'carnes': carnes})
+
+def bebida_list(request):
+    bebidas = Bebida.objects.all()
+    return render(request, 'blog/bebida_list.html', {'bebidas': bebidas})
+
+
+

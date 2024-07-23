@@ -11,13 +11,36 @@
             margin-top: 20px;
         }
         .list-group-item {
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.9);
         }
         .card-title {
             font-family: 'Lobster', cursive;
+            font-size: 2rem;
+            color: #343a40;
         }
         .card-text {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            color: #343a40;
+        }
+        .page-header {
+            background-color: #ff6f61;
+            color: #fff;
+            padding: 20px 0;
+        }
+        .page-header h1 a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            margin-top: 40px;
+        }
+        .btn-primary {
+            background-color: #ff6f61;
+            border-color: #ff6f61;
+        }
+        .btn-primary:hover {
+            background-color: #ff4b47;
+            border-color: #ff4b47;
         }
     </style>
     <script>
@@ -35,7 +58,7 @@
 
     <!-- Blog Header -->
     <div class="page-header text-center">
-        <h1><a href="/" class="text-decoration-none text-dark">Carnitas Reu</a></h1>
+        <h1><a href="/">Carnitas Reu</a></h1>
     </div>
 
     <!-- Blog Content -->
@@ -45,13 +68,13 @@
             <p>Lo más fresco lo puedes conseguir aquí</p>
         </div>
 
-        <div class="card text-bg-dark mb-4">
+        <div class="card text-bg-light mb-4">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIs9IdP9tvJ27EhbwkDCplKTNy5hPaOuF3mQ&s" class="card-img" alt="Carne">
             <div class="card-img-overlay text-center">
                 <h5 class="card-title">CARNES</h5>
                 <p class="card-text">¡Todo tipo de Carnes para tu hogar!</p>
-                <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                <a href="#" class="btn btn-primary" onclick="return mostrarListaCarnes();">click</a>
+                <p class="card-text"><small>Última actualización hace 3 minutos</small></p>
+                <a href="#" class="btn btn-primary" onclick="return mostrarListaCarnes();">Ver Carnes</a>
             </div>
         </div>
 
@@ -71,13 +94,13 @@
             </ul>
         </div>
 
-        <div class="card text-bg-dark mb-4">
+        <div class="card text-bg-light mb-4">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysJQHxXqrXrpj6T-G-qg0s18f5rVWY1wE3g&s" class="card-img" alt="Bebidas">
             <div class="card-img-overlay text-center">
-                <h5 class="card-title">Bebidas</h5>
+                <h5 class="card-title">BEBIDAS</h5>
                 <p class="card-text">¡Refrescate con nuestras bebidas!</p>
-                <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                <a href="#" class="btn btn-primary" onclick="return mostrarListaBebidas();">click</a>
+                <p class="card-text"><small>Última actualización hace 3 minutos</small></p>
+                <a href="#" class="btn btn-primary" onclick="return mostrarListaBebidas();">Ver Bebidas</a>
             </div>
         </div>
 
